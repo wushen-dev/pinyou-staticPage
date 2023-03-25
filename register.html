@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册页面</title>
+    <!-- 引入初始化css文件 -->
+    <link rel="stylesheet" href="./css/base.css">
+    <!-- 引入公共区域的css文件 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- 引入favicon图标 -->
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_3407739_fb079r8dmyu.css">
+    <!-- 引入注册页样式 -->
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <div class="w">
+        <header class="header">
+            <a href="index.html"><img src="./images/logo.png" alt=""></a>
+        </header>
+        <div class="registerarea">
+            <h3>注册新用户
+                <span class="login">我有账号，去<a href="#" class='style_red'>登录</a></span>
+            </h3>
+            <div class="reg_form">
+                <ul>
+                    <li><label for="tel">手机号：</label><input type="text">
+                        <span class="error"><i class="error_icon"><img src="./images/error_icon.png"
+                                    alt=""></i>手机号格式不正确，请重新输入！</span>
+                    </li>
+                    <li><label for="tel">手机验证码：</label><input type="text">
+                        <span class="success"><i class="success_icon"><img src="./images/success.png"
+                                    alt=""></i>验证码输入正确，不赖</span>
+                    </li>
+                    <li><label for="tel">登录密码：</label><input type="text">
+                    </li>
+                    <!-- 这里的安全验证可以再塞一个li进去 -->
+                    <li class="safe">安全程度<em>弱</em><em>中</em><em>强</em></li>
+                    <li><label for="tel">确认密码：</label><input type="text">
+                    </li>
+                    <!-- 同意协议部分也可以塞个li -->
+                    <li class="agree"><input type="checkbox" name="" id="">
+                        同意协议并注册<a href="#">《ZZY用户协议》</a>
+                    </li>
+                    <li class="complete">
+                        <input type="submit" value="完成注册">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="links">
+                <ul>
+                    <li><a href="#">关于我们</a></li>
+                    <li>|</li>
+                    <li><a href="#">联系我们</a></li>
+                    <li>|</li>
+                    <li><a href="#">联系客服</a></li>
+                    <li>|</li>
+                    <li><a href="#">商家入驻</a></li>
+                    <li>|</li>
+                    <li><a href="#">营销中心</a> </li>
+                    <li>| </li>
+                    <li><a href="#">手机品优购</a> </li>
+                    <li>| </li>
+                    <li><a href="#">友情链接</a> </li>
+                    <li>| </li>
+                    <li><a href="#">销售联盟</a> </li>
+                    <li>| </li>
+                    <li><a href="#">品优购社区</a> </li>
+                    <li>| </li>
+                    <li><a href="#">品优购公益</a> </li>
+                    <li>| </li>
+                    <li><a href="#">English Site</a> </li>
+                    <li>| </li>
+                    <li><a href="#"> Contact U</a></li>
+                </ul>
+                <div class="copyright"></br>地址：北京市昌平区建材城西路金燕龙办公楼一层 邮编：100096 电话：400-618-4000 传真：010-82935100
+                    邮箱:zhanghj+itcast.cn</br>
+                    京ICP备08001421号京公网安备11010800770
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

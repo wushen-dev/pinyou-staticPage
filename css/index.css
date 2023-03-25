@@ -1,0 +1,384 @@
+/* 主题盒子构建 */
+.main {
+    /* 父盒子给个高度，就不用清除浮动了 */
+    height: 454px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 220px;
+}
+
+/* 轮播图 */
+.focus {
+    float: left;
+    width: 721px;
+    height: 100%;
+}
+
+/* 右边的新闻部分 */
+.newsflash {
+    float: right;
+    width: 250px;
+    height: 100%;
+}
+
+.newsflash .news {
+    padding: 0 16px;
+    height: 165px;
+    border: 1px solid #e4e4e4;
+}
+
+.news .news-hd {
+    height: 33px;
+    line-height: 33px;
+    border-bottom: 1px dotted #e4e4e4;
+}
+
+.news-hd h3 {
+    float: left;
+    font-weight: 500;
+}
+
+.news-hd a {
+    float: right;
+}
+
+.news-hd a::after {
+    content: '\e62e';
+    font-family: "iconfont";
+    font-size: 12px;
+}
+
+.news-bd {
+    padding-top: 5px;
+}
+
+.news-bd ul li a {
+    line-height: 24px;
+}
+
+.news-bd ul li {
+    /* 超出内容使用省略号显示。这里不知道为什么写在a里不行，只能写在li里 */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.newsflash .lifeservice {
+    height: 210px;
+    border: 1px solid #e4e4e4;
+    /* 下面这个属性好像只对表格管用，我这里用这个不行 */
+    /* border-collapse: collapse; */
+    border-top: 0;
+    overflow: hidden;
+}
+
+/* 这里如果有框框多出来，可以给ul宽度加宽一些，然后把多余的部分在父元素overflow: hidden;切掉 */
+.newsflash .lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice ul li {
+    /* text-align: center;实现行内块元素或者行内元素的水平居中,所以下面用h5不行，h5是块元素，应该用i */
+    text-align: center;
+    float: left;
+    padding-top: 12px;
+    width: 62.5px;
+    height: 70px;
+    border-right: 1px solid #e4e4e4;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.lifeservice ul li a i {
+    /* 转化为行内块元素就可以设置宽高了 */
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+}
+
+/* 使用精灵图对这些li进行背景填充 */
+.lifeservice ul li:nth-of-type(1) a i {
+    background: url(../images/icons.png) no-repeat -16px -15px;
+}
+
+.lifeservice ul li:nth-of-type(2) a i {
+    background: url(../images/icons.png) no-repeat -79px -18px;
+}
+
+.lifeservice ul li:nth-of-type(3) a i {
+    background: url(../images/icons.png) no-repeat -142px -17px;
+}
+
+.lifeservice ul li:nth-of-type(4) a i {
+    background: url(../images/icons.png) no-repeat -205px -16px;
+}
+
+.lifeservice ul li:nth-of-type(5) a i {
+    background: url(../images/icons.png) no-repeat -17px -88px;
+}
+
+.lifeservice ul li:nth-of-type(6) a i {
+    background: url(../images/icons.png) no-repeat -79px -87px;
+}
+
+.lifeservice ul li:nth-of-type(7) a i {
+    background: url(../images/icons.png) no-repeat -140px -87px;
+}
+
+.lifeservice ul li:nth-of-type(8) a i {
+    background: url(../images/icons.png) no-repeat -206px -87px;
+}
+
+.lifeservice ul li:nth-of-type(9) a i {
+    background: url(../images/icons.png) no-repeat -16px -159px;
+}
+
+.lifeservice ul li:nth-of-type(10) a i {
+    background: url(../images/icons.png) no-repeat -77px -158px;
+}
+
+.lifeservice ul li:nth-of-type(11) a i {
+    background: url(../images/icons.png) no-repeat -141px -153px;
+}
+
+.lifeservice ul li:nth-of-type(12) a i {
+    background: url(../images/icons.png) no-repeat -206px -160px;
+}
+
+.newsflash .bargain {
+    height: 75px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recom {
+    height: 163px;
+    margin-bottom: 20px;
+}
+
+.recom-hd {
+    float: left;
+    text-align: center;
+    width: 206px;
+    height: 163px;
+    /* 这地方不能给行高，因为子元素会继承父元素的行高，会影响后面p的布局 */
+    /* line-height: 163px; */
+    background-color: #5c5251;
+}
+
+/* 操作一下字体图标 */
+.icon-tuijian {
+    color: #fff;
+    font-size: 78px;
+}
+
+.recom-hd p {
+    color: #fff;
+    font-size: 20px;
+    /* 让这四个字往上走走 */
+    margin-top: -15px;
+}
+
+.recom-bd {
+    float: left;
+    width: 994px;
+    height: 163px;
+    background-color: #ebebeb;
+}
+
+.recom-bd ul li {
+    float: left;
+    position: relative;
+}
+
+/* 把图片宽高写死，这样图片就可以自动拉伸到相应位置，避免出现因传入图片尺寸不同出现的布局问题 */
+.recom-bd ul li img {
+    width: 248px;
+    height: 163px;
+}
+
+/* 使用公式，去掉最后一个li的框 */
+.recom-bd ul li:nth-child(-n+3)::after {
+    /* 这里有一个细节，after伪元素是行内元素，是不能直接给宽高的，但是给了绝对或固定定位的元素（相对定位不可以），
+    就可以直接给宽高，所以这里不用再转换为行内块元素 */
+    position: absolute;
+    top: 10px;
+    right: 0;
+    content: '';
+    width: 1px;
+    height: 142px;
+    background-color: #dddddd;
+}
+
+/* 猜你喜欢模块 */
+.guess {
+    height: 274px;
+    margin-bottom: 20px;
+}
+
+.guess_hd {
+    height: 40px;
+    line-height: 40px;
+}
+
+.guess_bd {
+    height: 234px;
+    border: 1px solid #ededed;
+}
+
+.guess_hd h3 {
+    float: left;
+    font-size: 18px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.guess_hd a {
+    float: right;
+    font-size: 12px;
+    color: #666666;
+}
+
+.guess_hd a::after {
+    right: 0;
+    content: '\e64f';
+    font-family: 'iconfont';
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.guess_bd ul {
+    width: 1201px;
+}
+
+.guess_bd ul li {
+    float: left;
+    width: 200px;
+    height: 234px;
+}
+
+/* 先把i转换成行内块元素，然后给宽高 */
+.guess ul li a i {
+    /* i里面包含img，实现水平居中（直接对img操作不行，text-align只能实现行内或行内块的水平居中而且i要给宽度 */
+    text-align: center;
+    /* 垂直居中 */
+    line-height: 150px;
+    display: inline-block;
+    width: 100%;
+    height: 150px;
+}
+
+.guess_bd .price {
+    /* 这里宽度要和父盒子一样宽,因为padding在box-sizing: border-box;的情况下padding不会撑开盒子 */
+    width: 200px;
+    height: 60px;
+    padding-left: 36px;
+    border-right: 1px solid #ededed;
+}
+
+.guess_bd ul li:nth-child(6) .price {
+    border: 0;
+}
+
+.guess_bd .price h3 {
+    font-size: 18px;
+    color: #df3033;
+}
+
+/* 楼层大模块floor制作 */
+.floor .w {
+    /* 让楼层里调用w的类,全部距离上边20px */
+    margin-top: 20px;
+}
+
+/* 第一层家用电器appliance */
+.appliance .box_hd {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 2px solid #c81623;
+}
+
+.box_hd h3 {
+    float: left;
+    font-size: 18px;
+    font-weight: 500;
+    color: #c81623;
+}
+
+.tab_list {
+    float: right;
+}
+
+.tab_list ul li {
+    float: left;
+}
+
+.tab_list ul li:nth-of-type(2n) {
+    padding: 0 15px;
+}
+
+.tab_list ul li:nth-of-type(17) {
+    padding-right: 9px;
+}
+
+.box_bd {
+    height: 360px;
+}
+
+.tab_content>div {
+    float: left;
+}
+
+.col_210 {
+    width: 210px;
+    height: 360px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.col_210 ul {
+    padding-left: 14px;
+}
+
+.col_210 ul li {
+    float: left;
+    width: 86px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    margin-right: 12px;
+    border-bottom: 1px solid #ededed;
+}
+
+
+.col_210 img {
+    padding-top: 26px;
+}
+
+.col_329 {
+    width: 329px;
+    height: 360px;
+}
+
+.col_329 img {
+    width: 329px;
+    height: 360px;
+}
+
+.col_221 {
+    width: 221px;
+    height: 360px;
+    border-right: 1px solid #ccc;
+}
+
+.col_219 {
+    width: 219px;
+    height: 360px;
+}
+
+.bb {
+    /* 如果a包含有宽度的盒子，最好把a转换为块级元素，要不然容易出问题 */
+    display: block;
+    border-bottom: 1px solid #ccc;
+}

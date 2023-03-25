@@ -1,0 +1,140 @@
+/* 注册页面的css */
+.w .header {
+    height: 82px;
+    line-height: 82px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.links {
+    margin-top: 57px;
+    border-top: 1px solid #ccc;
+}
+
+.registerarea {
+    height: 487px;
+    padding-top: 20px;
+}
+
+.registerarea h3 {
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    background-color: #ececec;
+    border: 1px solid #dfdfdf;
+    padding: 0 12px;
+}
+
+.registerarea .login {
+    font-size: 14px;
+    font-weight: 500;
+    float: right;
+}
+
+.reg_form {
+    width: 600px;
+    height: 422px;
+    /* 居中对齐，别忘了 */
+    margin: 0 auto;
+    padding-top: 54px;
+}
+
+.reg_form label {
+    font-size: 14px;
+    color: #4c4c4c;
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+}
+
+.reg_form input {
+    /* 去除默认的边框 */
+    outline: none;
+    width: 240px;
+    height: 34px;
+    border: 1px solid #999999;
+}
+
+.error {
+    font-size: 12px;
+    color: #df3033;
+}
+
+.success {
+    font-size: 12px;
+    color: green;
+}
+
+.error_icon,
+.success_icon img {
+    margin: -2px 5px 0 10px;
+}
+
+.reg_form ul li {
+    margin-bottom: 20px;
+}
+
+.safe {
+    padding-left: 176px;
+    font-size: 12px;
+    color: #b2b2b2;
+}
+
+.reg_form ul li:nth-of-type(3) {
+    margin-bottom: 10px;
+}
+
+.safe em {
+    /* 这里当然也可以直接利用行内元素中间有缝隙的特点，直接给padding撑开盒子，这样就不用给margin了 */
+    /* padding: 0 12px; */
+    display: inline-block;
+    text-align: center;
+    width: 34px;
+    height: 13px;
+    line-height: 13px;
+    color: #fff;
+    margin-left: 1px;
+}
+
+.safe em:nth-of-type(1) {
+    margin-left: 10px;
+    background-color: #de1111;
+}
+
+.safe em:nth-of-type(3) {
+    background-color: #40b83f;
+}
+
+.safe em:nth-of-type(2) {
+    background-color: #f79100;
+}
+
+.agree {
+    padding-left: 95px;
+    margin-top: 42px;
+}
+
+.agree a {
+    margin-left: 8px;
+    color: #1ba1e6;
+}
+
+.agree input {
+    width: 16px;
+    height: 15px;
+    /* 让文字和图标居中显示 */
+    vertical-align: middle;
+    margin-right: 13px;
+}
+
+.complete input {
+    border: none;
+    margin: 30px 0 0 100px;
+    width: 200px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background-color: #c81623;
+    font-size: 14px;
+    color: #fff;
+}
